@@ -13,7 +13,7 @@
   "capabilities": [],
   "dependencies": [ {
     "appId": "7ce0b65f-bc3e-497b-95bf-c7538ad8a5e8",
-    "name": "MainApp1",
+    "name": "MainApp",
     "publisher": "Publisher", "version": "1.0.0.0"
   }
   ],
