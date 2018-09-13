@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "MainApp"
+		},
+		{
+			"path": "TestApp"
+		},
+		{
+			"path": "Dependencies"
+		},
+		{
+			"path": "Scripts"
+		}
+	],
+	"settings": {}
+}

@@ -1,0 +1,30 @@
+{
+  "id": "d6c92f82-637b-450a-8ce9-0b04ae5fe1ed",
+  "name": "MainApp.Test",
+  "publisher": "Publisher",
+  "brief": "Test App",
+  "description": "Test app",
+  "version": "1.0.0.0",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "capabilities": [],
+  "dependencies": [ {
+    "appId": "7ce0b65f-bc3e-497b-95bf-c7538ad8a5e8",
+    "name": "MainApp1",
+    "publisher": "Publisher", "version": "1.0.0.0"
+  }
+  ],
+  "screenshots": [],
+  "platform": "12.0.0.0",
+  "application": "12.0.0.0",
+  "features": ["TranslationFile"],
+  "showMyCode": true,
+  "idRange": {
+    "from": 50000,
+    "to": 99999
+  },
+  "test": "12.0.0.0"
+}

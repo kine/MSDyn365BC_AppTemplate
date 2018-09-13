@@ -1,0 +1,25 @@
+{
+  "id": "7ce0b65f-bc3e-497b-95bf-c7538ad8a5e8",
+  "name": "MainApp",
+  "publisher": "Publisher",
+  "brief": "My MainApp",
+  "description": "Main app",
+  "version": "1.0.0.0",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "capabilities": [],
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "12.0.0.0",
+  "application": "12.0.0.0",
+  "features": ["TranslationFile"],
+  "showMyCode": true,
+  "idRange": {
+    "from": 50000,
+    "to": 99999
+  },
+  "target": "Extension"
+}

@@ -1,0 +1,6 @@
+{
+    "extensions.autoUpdate": false,
+    "al.enableCodeAnalysis": true,
+    "al.codeAnalyzers": ["${PerTenantExtensionCop}"],
+    "al.ruleSetPath": ".\\Rules\\general.ruleset.json",
+}
