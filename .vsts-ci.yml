@@ -32,7 +32,7 @@ variables:
   TestCodeunitId: 130402
   #UserPwd: $(USER.PASSWORD)
   UserPwd: 'pass@word1'
-  CertFile: 'c:\Cert\CodeSigning.pfx'
+  CertFile: ''
   CertPwd: ''
 
 queue:
