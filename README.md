@@ -7,7 +7,7 @@ You will be able to create Build pipeline with few clicks (or it will be created
 
 ## What to change
 - App.json in MainApp and TestApp folders
-- Settings1.ps1 in Scripts folder (container name, image name, license file)
+- Settings.ps1 in Scripts folder (container name, image name, license file)
 - .vsts-ci.yml in root folder (TestCodeunitId, CertFile, CertPwd, check the queue:demands, by default there is set Docker - the agent must have this requirement set or remove the demand)
 
 ## Needed settings in Azure DevOps
