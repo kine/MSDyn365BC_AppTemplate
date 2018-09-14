@@ -1,6 +1,6 @@
 $ContainerName = 'BC'
 $ImageName = 'bcinsider.azurecr.io/bcsandbox'
-$LicenseFile = (Join-Path $PSSCriptRoot '..\fin.flf')
+$LicenseFile = '' #(Join-Path $PSSCriptRoot '..\fin.flf')
 $VsixPath = "C:\ProgramData\NVR\Extensions\$containerName\vsix"
 
 if (-not (Test-Path -PathType Container $vsixpath)) {
