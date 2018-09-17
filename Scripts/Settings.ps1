@@ -1,5 +1,5 @@
 $ContainerName = 'BC'
-$ImageName = 'bcinsider.azurecr.io/bcsandbox'
+$ImageName = 'microsoft/bcsandbox'
 $LicenseFile = '' #(Join-Path $PSSCriptRoot '..\fin.flf')
 $VsixPath = "C:\ProgramData\NVR\Extensions\$containerName\vsix"
 
