@@ -2,7 +2,7 @@
 	// See http://go.microsoft.com/fwlink/?LinkId=827846
 	// for the documentation about the extensions.json format
 	"recommendations": [
-		"waldo.crs-al-language-extension"
-	
+		"waldo.crs-al-language-extension",
+		"navertical"
 	]
 }

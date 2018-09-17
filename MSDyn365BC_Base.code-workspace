@@ -13,5 +13,8 @@
 			"path": "Scripts"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"al.packageCachePath": "..\\",
+		"navertical.IgnoreVerification": true
+	}
 }
