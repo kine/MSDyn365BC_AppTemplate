@@ -15,7 +15,9 @@
   "screenshots": [],
   "platform": "13.0.0.0",
   "application": "13.0.0.0",
-  "features": ["TranslationFile"],
+  "features": [
+    "TranslationFile"
+  ],
   "showMyCode": true,
   "idRange": {
     "from": 50000,
