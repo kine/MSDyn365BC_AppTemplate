@@ -52,14 +52,18 @@ steps:
   parameters:
     pwd: $(UserPwd)
 
-- template: Templates/DownloadSymbols.yml@MSDYN365BC_Yaml
-  parameters:
-    pwd: $(UserPwd)
+#No need to download symbols. Will be downloaded in Compile step by navcontainerhelper
+#- template: Templates/DownloadSymbols.yml@MSDYN365BC_Yaml
+#  parameters:
+#    pwd: $(UserPwd)
+
+- template: Templates/SetAppBuildNo.yml@MSDYN365BC_Yaml
 
 - template: Templates/CompileALApps.yml@MSDYN365BC_Yaml
   parameters:
     CertPath: $(CertFile)
     CertPwd: $(CertPwd)
+    pwd: $(UserPwd)
 
 - template: Templates/InstallALApps.yml@MSDYN365BC_Yaml
   parameters:
