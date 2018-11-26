@@ -1,9 +1,10 @@
-# File: .vsts-ci.yml
+# File: Azure-pipelines.yml
 # 
 # Author: Kamil (Kine) Sacek
 #
 # To use, place this file into root of your git repository and push to the Azure DevOps repository. 
-# Build pipeline will be created automagically and will build your app.
+# Build pipeline will be created automagically and will build your app when you will go to create build pipeline
+# for your repository. After creating, you need to set variable USER.PASSWORD for the pipeline to work correctly.
 #
 # Prerequisities:
 #   Service connection with name "GitHub" leading to GitHub in your Azure DevOps Project.
@@ -13,9 +14,10 @@
 #   If used on Agent with Domain, you can create certificate without password but secured with access for
 #   specific users. In this case do not fill the CertPwd variable.
 #
-
-trigger:
-- master
+#   By default, windows authentication is used. Thus the process needs the password for user account, under
+#   which the agent is running (thus only hosted agent is possible for now). You need to set variable on the 
+#   pipeline to set variable USER.PASSWORD with the password. I recommend to use Variable group to be able
+#   to assign it in repeatable way to all pipelines.
 
 resources:
   repositories:
@@ -30,21 +32,23 @@ resources:
 
 variables:
   TestCodeunitId: 130402
-  #UserPwd: $(USER.PASSWORD)
-  UserPwd: 'pass@word1'
+  UserPwd: '$(USER.PASSWORD)'  #Variable USER.PASSWORD must exists and have password for the account under which the agent is running
   CertFile: ''
   CertPwd: ''
 
-queue:
-  name: default
-  demands: Docker
+pool:
+  name: Default     #Using default agent pool
+  demands: docker   #Agent must support docker
+
+trigger: 
+- master    #Trigger only for master branch or PR if set in PR
 
 steps:
 - checkout: self
   submodules: true
-
+  
 - task: NuGetToolInstaller@0
-  displayName: 'Use NuGet 4.3.0'
+  displayName: 'Install Nuget'
 
 - template: Templates/InstallModules.yml@MSDYN365BC_Yaml
 
@@ -52,12 +56,9 @@ steps:
   parameters:
     pwd: $(UserPwd)
 
-#No need to download symbols. Will be downloaded in Compile step by navcontainerhelper
-#- template: Templates/DownloadSymbols.yml@MSDYN365BC_Yaml
-#  parameters:
-#    pwd: $(UserPwd)
-
 - template: Templates/SetAppBuildNo.yml@MSDYN365BC_Yaml
+  parameters:
+    UpdateDevOpsBuildNo: 1
 
 - template: Templates/CompileALApps.yml@MSDYN365BC_Yaml
   parameters:
