@@ -5,7 +5,7 @@ codeunit 50000 "TestInstallManagement"
     //Add the codeunit to the table for running it during the test run
     trigger OnInstallAppPerCompany()
     begin
-        RegisterTestCodeunit(50001);
+        RegisterTestCodeunit(50005);
     end;
 
     procedure RegisterTestCodeunit(CodeunitId:Integer)
