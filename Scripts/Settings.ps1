@@ -21,17 +21,5 @@ $RepoPath = (Join-Path $PSSCriptRoot '..')
 $AppPath = (Join-Path $PSSCriptRoot '..\MainApp')
 $TestAppPath = (Join-Path $PSSCriptRoot '..\TestApp')
 
-
-if($env:TF_BUILD) {
-   $additionalParameters = @("--volume ""$($RepoPath):C:\app""",
-        '-e CustomNavSettings=ServicesUseNTLMAuthentication=true',
-        '-e usessl=N',
-        '-e webclient=N',
-        '-e httpsite=N'
-    )
-}
-else {
-    $additionalParameters = @("--volume ""$($RepoPath):C:\app""",
-        '-e CustomNavSettings=ServicesUseNTLMAuthentication=true'
-    )
-}
+#OPTIONAL! Add optional parameters for the container creation.
+#$optionalParameters = @()
