@@ -4,8 +4,10 @@ codeunit 50005 "TestCodeunit"
 
     [Test]
     procedure MyFirstTest()
+    var
+        Assert: Codeunit Assert;
     begin
-        Message('Succeeded!');
+        Assert.AreEqual(true, true, 'Succeeded!');
     end;
 
     [Test]
