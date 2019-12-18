@@ -1,5 +1,5 @@
 $ContainerName = 'BC'
-$ImageName = 'MSDyn365BC_AppTemplate'
+$ImageName = 'mcr.microsoft.com/businesscentral/sandbox'
 $LicenseFile = '' #(Join-Path $PSSCriptRoot '..\fin.flf')
 $VsixPath = "C:\ProgramData\NVR\Extensions\$containerName\vsix"
 
